@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎨 Biblioteca de Ícones</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <button id="themeToggle">Modo Escuro</button>
+    <h1>🧩 Biblioteca de Ícones</h1>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="showTab('todos')">
+        Todos
+      </button>
+      <button class="tab-button" onclick="showTab('favoritos')">
+        ⭐ Favoritos
+      </button>
+      <button class="tab-button" onclick="showTab('historicos')">
+        Históricos
+      </button>
+    </div>
+
+    <input
+      type="text"
+      id="search"
+      placeholder="Pesquisar ícone pelo nome..."
+      aria-label="Pesquisar ícone pelo nome"
+    />
+
+    <div class="icon-box" id="iconBox">
+      <div class="icon" data-name="Teste Unitário">
+        🧪<span>Teste Unitário</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Chat">
+        💬<span>Chat</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Editor">
+        📝<span>Editor</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Config">
+        ⚙️<span>Config</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Pasta ou Arquivos">
+        📁<span>Pasta ou Arquivos</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="ET">
+        👽<span>ET</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Fogo">
+        🔥<span>Fogo</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Relógio">
+        🕐<span>Relógio</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Computador">
+        🖥️<span>Computador</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Globo">
+        🌐<span>Globo</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Dado">
+        🎲<span>Dado</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Casino">
+        🎰<span>Casino</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Baralho">
+        🃏<span>Baralho</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Controle Game">
+        🎮<span>Controle Game</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Yin-Yang">
+        ☯️<span>Yin-Yang</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Joystick">
+        🕹️<span>Joystick</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Alien Monstro">
+        👾<span>Alien Monstro</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Bola 8">
+        🎱<span>Bola 8</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Fone de Ouvido">
+        🎧<span>Fone de Ouvido</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Máscaras de Teatro">
+        🎭<span>Máscaras de Teatro</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Meia Lua">
+        🌓<span>Meia Lua</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Banco de Dados">
+        🗄️<span>Banco de Dados</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Servidor">
+        🧰<span>Servidor</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Servidor 1">
+        🗃️<span>Servidor 1</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="API">
+        🔌<span>API</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Deploy/Build">
+        🚀<span>Deploy/Build</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Responsivo">
+        💻<span>Responsivo</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Responsivo 1">
+        📱<span>Responsivo 1</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Terminal/Console 1">
+        ⌨️<span>Terminal/Console 1</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Terminal/Console">
+        💻<span>Terminal/Console</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Erro">
+        ⚠️<span>Erro</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Erro 1">
+        ❌<span>Erro 1</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Sucesso">
+        ✅<span>Sucesso</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Debug">
+        🐞<span>Debug</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Breakpoint">
+        🛑<span>Breakpoint</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="IA (Geral)">
+        🤖<span>IA (Geral)</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Machine Learning 1">
+        📊<span>Machine Learning 1</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Machine Learning">
+        🧠<span>Machine Learning</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Treinamento de Modelo">
+        🏋️‍♂️<span>Treinamento de Modelo</span
+        ><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Nuvem">
+        ☁️<span>Nuvem</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Upload">
+        ⬆️<span>Upload</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Download">
+        ⬇️<span>Download</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="HTTPS">
+        🔒<span>HTTPS</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="API REST">
+        🔌<span>API REST</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="API REST 1">
+        🌐<span>API REST 1</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Layout">
+        🧱<span>Layout</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Ícones">
+        🎨<span>Ícones</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Cores">
+        🌈<span>Cores</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Tipografia">
+        🔠<span>Tipografia</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Animações">
+        🎞️<span>Animações</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Carregando">
+        ⏳<span>Carregando</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Aviso">
+        ⚠️<span>Aviso</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Info">
+        ℹ️<span>Info</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Erro encontrado">
+        ❌<span>Erro encontrado</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Aviso (warning)">
+        ⚠️<span>Aviso (warning)</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Console.log">
+        💬<span>Console.log</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Executando">
+        ▶️<span>Executando</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Pausado">
+        ⏸️<span>Pausado</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Passo-a-passo">
+        ⏭️<span>Passo-a-passo</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Inspecionar">
+        🔍<span>Inspecionar</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Dataset 1">
+        🧾<span>Dataset 1</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Dataset">
+        📁<span>Dataset</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Dados biológicos ou genéticos">
+        🧬<span>Dados biológicos ou genéticos</span
+        ><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Dataset para treino de IA">
+        🧠<span>Dataset para treino de IA</span
+        ><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Salvamento">
+        💾<span>Salvamento</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Conectividade">
+        📶<span>Conectividade</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Rede / Satélite">
+        📡<span>Rede / Satélite</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Algoritmo / Rede Neural">
+        🌀<span>Algoritmo / Rede Neural</span
+        ><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Configuração">
+        ⚙️<span>Configuração</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Construção/Build">
+        🛠️<span>Construção/Build</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Deploy / Lançamento">
+        🚀<span>Deploy / Lançamento</span
+        ><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="NPM/Pacotes">
+        📦<span>NPM/Pacotes</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Programador(a)">
+        👨‍💻/👩‍💻<span>Programador(a)</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Extensão/Plugin">
+        🧩<span>Extensão/Plugin</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Dicas">
+        💡<span>Dicas</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Limpar">
+        🧹<span>Limpar</span><button class="favorite-btn">☆</button>
+      </div>
+      <div class="icon" data-name="Tema">
+        🌙<span>Tema</span><button class="favorite-btn">☆</button>
+      </div>
+    </div>
+  </body>
+</html>

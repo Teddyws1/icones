@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --icon-bg: #f0f0f0;
+    --icon-shadow: #999;
+    --search-bg: #e0e0e0;
+    --search-color: #000;
+    --tab-bg: #ddd;
+    --tab-color: #000;
+    --tab-active: #888;
+    --hover-bg: #b0ebff;
+    --label-color: #333;
+}
+
+body.dark {
+    --bg-color: #1e1e1e;
+    --text-color: cyan;
+    --icon-bg: #2a2d2e;
+    --icon-shadow: #00b7db;
+    --search-bg: #333;
+    --search-color: #fff;
+    --tab-bg: #333;
+    --tab-color: #fff;
+    --tab-active: #0e6d7f;
+    --hover-bg: #00ffd5;
+    --label-color: #0497c8;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    padding: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+#themeToggle {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: var(--tab-bg);
+    color: var(--tab-color);
+    border: none;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 15px;
+}
+
+#search {
+    width: 100%;
+    max-width: 400px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 13px;
+    border: none;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background: var(--search-bg);
+    color: var(--search-color);
+    outline: none;
+}
+
+.tabs {
+    margin-bottom: 15px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background: var(--tab-bg);
+    color: var(--tab-color);
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    margin-right: 9px;
+    transition: background 0.3s;
+}
+
+.tab-button.active {
+    background: var(--tab-active);
+}
+
+.icon-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 23px;
+}
+
+.icon {
+    width: 123px;
+    height: 120px;
+    background: var(--icon-bg);
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    flex-direction: column;
+    transition: 0.3s;
+    box-shadow: 0 0 30px var(--icon-shadow);
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.icon:hover {
+    background: var(--hover-bg);
+    transform: scale(1.05);
+}
+
+.icon span {
+    font-size: 14px;
+    color: var(--label-color);
+    margin-top: 8px;
+    user-select: none;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 6px;
+    right: 16px;
+    font-size: 27px;
+    background: none;
+    border: none;
+    color: #ffa200;
+    cursor: pointer;
+    user-select: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.copy-feedback {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00b7dbcc;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    user-select: none;
+    z-index: 10;
+}
+
+.copy-feedback.show {
+    opacity: 1;
+}
+
