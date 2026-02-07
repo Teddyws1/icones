@@ -173,3 +173,21 @@ themeToggle.addEventListener("click", toggleTheme);
 loadFavorites();
 loadTheme();
 showTab("todos");
+
+function checkMaintenanceNotice() {
+  let visits = localStorage.getItem('siteVisits') || 0;
+  visits = parseInt(visits) + 1;
+  localStorage.setItem('siteVisits', visits);
+
+  if (visits >= 5) {
+    document.getElementById('maintenanceNotice').style.display = 'flex';
+    localStorage.setItem('siteVisits', 0);
+  }
+}
+
+function closeNotice() {
+  const notice = document.getElementById('maintenanceNotice');
+  notice.style.display = 'none';
+}
+
+window.addEventListener('load', checkMaintenanceNotice);
