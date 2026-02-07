@@ -179,7 +179,7 @@ function checkMaintenanceNotice() {
   visits = parseInt(visits) + 1;
   localStorage.setItem('siteVisits', visits);
 
-  if (visits >= 5) {
+  if (visits >= 15) {
     document.getElementById('maintenanceNotice').style.display = 'flex';
     localStorage.setItem('siteVisits', 0);
   }
